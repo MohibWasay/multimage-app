@@ -1,5 +1,10 @@
 {
   "undef": true,
   "unused": true,
-  "predef": [ "console", "angular", "_" ]
+  "predef": [
+    "console",
+    "angular",
+    "_",
+    "FileReader",
+    "Image" ]
 }
