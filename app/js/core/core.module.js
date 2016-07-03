@@ -3,8 +3,7 @@
 var module = 'multimage.core'; 
 
 angular
-	.module(module, [
-		])
+	.module(module, [])
 	.config(routerConfiguration)
 	.config(restangularConfiguration)
 ;
