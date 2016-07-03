@@ -1,0 +1,20 @@
+'use strict';
+
+var module = 'multimage.core'; 
+
+angular
+	.module(module, [
+		])
+	.config(routerConfiguration)
+	.config(restangularConfiguration)
+;
+
+function routerConfiguration($urlRouterProvider){
+  $urlRouterProvider.otherwise('/home');
+}
+
+function restangularConfiguration(RestangularProvider){
+  RestangularProvider.setBaseUrl('/api');
+}
+
+
