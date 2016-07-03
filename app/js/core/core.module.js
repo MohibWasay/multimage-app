@@ -5,7 +5,7 @@
 
 	angular
 	.module(module, [
-		'angular.ui.router',
+		'ui.router',
 		'restangular'
 		])
 	.config(restangularConfiguration)

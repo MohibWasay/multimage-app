@@ -5,8 +5,7 @@
 
 	angular
 	  .module(module)
-	  .run(routingEvents)
-	;
+	  .run(routingEvents);
 
 	function routingEvents($rootScope, lodash){
 	  $rootScope.$on('$stateChangeStart', function(){
