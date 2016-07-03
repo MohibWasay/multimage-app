@@ -3,9 +3,14 @@
 var module = 'multimage.core'; 
 
 angular
-	.module(module, [])
+	.module(module, [
+		'angular.ui.router',
+		'restangular',
+		'restangular'
+		])
 	.config(routerConfiguration)
 	.config(restangularConfiguration)
+	.value('lodash', _)
 ;
 
 function routerConfiguration($urlRouterProvider){

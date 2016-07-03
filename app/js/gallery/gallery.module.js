@@ -12,6 +12,7 @@ function configuration($stateProvider) {
 	.state('app.gallery', {
 		url: '/gallery',
 		title: 'Multimage - Gallery',
+		templateUrl: 'gallery.html'
 	})
 }
 

@@ -2,7 +2,7 @@
 
 var module = 'multimage.core'; 
 
-angular.
+angular
   .module(module, [])
   .run(routingEvents)
 ;
