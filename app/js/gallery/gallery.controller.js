@@ -7,6 +7,6 @@
 
 	function controller(){
 		var vm = this;
-		vm.state = 'Hello World';
+		vm.state = 'Hello From Gallery';
 	}
 })();
