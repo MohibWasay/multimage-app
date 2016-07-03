@@ -18,6 +18,9 @@
             name: 'imageFilter',
             fn: function(item) {
                 var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+                if('|jpg|png|jpeg|bmp|gif|'.indexOf(type) === -1){
+                    console.log('Only images can be uploaded my Friend :(');
+                }
                 return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
             }
         });
