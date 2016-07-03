@@ -1,5 +1,4 @@
 
-
 (function(){
 	'use strict';
 
@@ -7,15 +6,14 @@
 
 	angular
 		.module(module, [])
-		.config(configuration)
-	;
+		.config(configuration);
 
 	function configuration($stateProvider) {
 		$stateProvider
-		.state('app.gallery', {
+		.state('gallery', {
 			url: '/gallery',
-			title: 'Multimage - Gallery',
-			templateUrl: 'gallery.html'
+			controller: 'Gallery as vm',
+			templateUrl: 'js/gallery/gallery.html'
 		})
 	}
 })();
