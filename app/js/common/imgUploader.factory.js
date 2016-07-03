@@ -74,10 +74,10 @@
             uploader.onProgressItem = onProgressItem;
             uploader.onProgressAll = onProgressAll;
             uploader.onSuccessItem = onSuccessItem;
-            uploader.onSuccessItem = onSuccessItem;
             uploader.onErrorItem = onErrorItem;
             uploader.onCompleteItem = onCompleteItem;
             uploader.onCompleteAll = onCompleteAll;
+            uploader.onCancelItem = onCancelItem;
 
             return uploader;
         }

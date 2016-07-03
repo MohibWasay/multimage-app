@@ -4,7 +4,7 @@
 
     angular
         .module('multimage.common')
-        .factory('ngThumb', directive);
+        .directive('ngThumb', directive);
 
     function directive($window){
         var helper = {
