@@ -8,8 +8,8 @@
 	  .run(routingEvents);
 
 	function routingEvents($rootScope, lodash){
-	  $rootScope.$on('$stateChangeStart', function(){
-	  	console.log(lodash);
+	  $rootScope.$on('$stateChangeStart', function(event, fromState){
+		  console.log(lodash.capitalize(fromState.name));
 	  });
 	}
 })();
