@@ -9,7 +9,7 @@ angular
 ;
 
 function routerConfiguration($urlRouterProvider){
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/gallery');
 }
 
 function restangularConfiguration(RestangularProvider){
