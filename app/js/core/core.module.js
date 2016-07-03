@@ -1,24 +1,24 @@
-'use strict';
 
-var module = 'multimage.core'; 
+(function(){
+	'use strict';
+	var module = 'multimage.core';
 
-angular
+	angular
 	.module(module, [
 		'angular.ui.router',
-		'restangular',
 		'restangular'
 		])
-	.config(routerConfiguration)
 	.config(restangularConfiguration)
+	.config(routerConfiguration)
 	.value('lodash', _)
-;
+	;
 
-function routerConfiguration($urlRouterProvider){
-  $urlRouterProvider.otherwise('/gallery');
-}
+	function routerConfiguration($urlRouterProvider){
+	  $urlRouterProvider.otherwise('/gallery');
+	}
 
-function restangularConfiguration(RestangularProvider){
-  RestangularProvider.setBaseUrl('/api');
-}
-
+	function restangularConfiguration(RestangularProvider){
+	  RestangularProvider.setBaseUrl('/api');
+	}
+})();
 

@@ -1,8 +1,11 @@
-'use strict';
 
-angular.module('multimage', [
-	'ui.router', 
-	'ui.bootstrap',
-	'angular-file-upload'
+(function(){
+	'use strict';
+	angular.module('multimage', [
+		'multimage.core', 
+		'multimage.gallery'
 	]);
+})();
+
+
 

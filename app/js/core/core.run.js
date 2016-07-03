@@ -1,16 +1,17 @@
-'use strict';
 
-var module = 'multimage.core'; 
+(function(){
+	'use strict';
+	var module = 'multimage.core'; 
 
-angular
-  .module(module, [])
-  .run(routingEvents)
-;
+	angular
+	  .module(module)
+	  .run(routingEvents)
+	;
 
-function routingEvents($rootScope, lodash){
-  $rootScope.$on('$stateChangeStart', onStateChanged);
+	function routingEvents($rootScope, lodash){
+	  $rootScope.$on('$stateChangeStart', function(){
+	  	console.log(lodash);
+	  });
+	}
+})();
 
-  function onStateChanged(){
-    console.log(lodash);
-  }
-}
