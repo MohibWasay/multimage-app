@@ -1,0 +1,3 @@
+'use strict';
+
+var app = angular.module('multimage', ['ui.router']);
