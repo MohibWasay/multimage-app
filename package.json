@@ -14,7 +14,8 @@
   "author": "Mohib A. Wasay",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.1.0"
   },
   "dependencies": {
     "angular": "^1.5.7",
