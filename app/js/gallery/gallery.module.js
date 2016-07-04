@@ -4,7 +4,7 @@
 
 	var module = {
 		name: 'multimage.gallery',
-		dependencies: []
+		dependencies: ['restangular']
 	};
 
 	angular
@@ -24,6 +24,6 @@
 			title: 'Image Gallery - Upload',
 			controller: 'Upload as vm',
 			templateUrl: 'js/gallery/upload.html'
-		})
+		});
 	}
 })();
