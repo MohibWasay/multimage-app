@@ -14,11 +14,10 @@
 	;
 
 	function routerConfiguration($urlRouterProvider){
-	  $urlRouterProvider.otherwise('/gallery');
+	  $urlRouterProvider.otherwise('/gallery/upload');
 	}
 
 	function restangularConfiguration(RestangularProvider){
 	  RestangularProvider.setBaseUrl('/api');
 	}
 })();
-
