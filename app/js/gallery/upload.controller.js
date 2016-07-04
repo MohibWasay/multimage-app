@@ -7,14 +7,19 @@
 
     function controller(ImgUploader, Restangular){
         var vm = this;
-        vm.uploader = ImgUploader.create('upload.php');
+        vm.doneButton = true;
+        vm.uploader = ImgUploader.create('http://localhost:7075/upload');
+
         vm.uploader.onAfterAddingAll = onAfterAddingAll;
+        vm.uploader.onCompleteAll = onCompleteAll;
 
         function onAfterAddingAll(addedFileItems){
-        	Restangular.all('upload')
-          	.withHttpConfig({transformRequest: angular.identity})
-          	.customPOST(addedFileItems, undefined, undefined,
-            	{ 'Content-Type': 'application/x-www-form-urlencoded' });
+            vm.doneButton = false;
+        	vm.uploader.uploadAll();
+        }
+
+        function onCompleteAll(){
+            vm.doneButton = true;
         }
     }
 })();
