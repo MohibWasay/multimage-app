@@ -54,10 +54,7 @@
         function create(url){
             var uploader = new FileUploader({
                 url: url,
-                arrayKey: '',
-                data: {
-                    files: files
-                }
+                arrayKey: ''
             });
 
             uploader.filters.push({
