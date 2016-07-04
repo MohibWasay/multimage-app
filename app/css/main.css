@@ -10,7 +10,8 @@ canvas {
 	-moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
 	box-shadow: 3px 3px 3px 0 #e3e3e3;
 	border: 1px solid #c3c3c3;
-	height: 220px;
+    height: 220px;
+    max-width: 100%;
 	margin: 6px auto 0 auto;
 }
 
@@ -26,7 +27,7 @@ canvas {
 .gallery .gallery-image-view {
 	border: 2px solid #aaa;
 	padding: 5px;
-	background-color: #eee;
+	background-color: #f1f1f1;
 }
 
 .gallery .gallery-image-view .gallery_image-box {
