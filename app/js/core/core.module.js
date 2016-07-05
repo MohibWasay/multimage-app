@@ -2,6 +2,9 @@
 (function(){
 	'use strict';
 	var module = 'multimage.core';
+	var environment = {
+		dev: { baseUrl: 'http://localhost:7075' }
+	};
 
 	angular
 	.module(module, [
@@ -11,6 +14,7 @@
 	.config(restangularConfiguration)
 	.config(routerConfiguration)
 	.value('lodash', _)
+	.value('environment', environment)
 	;
 
 	function routerConfiguration($urlRouterProvider){
@@ -18,6 +22,6 @@
 	}
 
 	function restangularConfiguration(RestangularProvider){
-	  RestangularProvider.setBaseUrl('/api');
+	  RestangularProvider.setBaseUrl(environment['dev'].baseUrl);
 	}
 })();
