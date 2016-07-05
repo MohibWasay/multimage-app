@@ -5,10 +5,11 @@
         .module('multimage.gallery')
         .controller('Upload', controller);
 
-    function controller(ImgUploader, Restangular){
+    function controller(ImgUploader, Restangular, environment){
         var vm = this;
         vm.doneButton = true;
-        vm.uploader = ImgUploader.create('http://localhost:7075/upload');
+        vm.onTextChange = onTextChange;
+        vm.uploader = ImgUploader.create(environment['dev'].baseUrl + '/upload');
 
         vm.uploader.onAfterAddingAll = onAfterAddingAll;
         vm.uploader.onCompleteAll = onCompleteAll;
@@ -16,6 +17,10 @@
         function onAfterAddingAll(addedFileItems){
             vm.doneButton = false;
         	vm.uploader.uploadAll();
+        }
+
+        function onTextChange(newName, oldName){
+            Restangular.all('rename').post({oldName: oldName, newName: newName});
         }
 
         function onCompleteAll(){
