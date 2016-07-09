@@ -1,4 +1,4 @@
-# Multimage API Server
+# Multimage Web Application
 
 ### Prerequisites 
 
