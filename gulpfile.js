@@ -74,6 +74,5 @@ gulp.task('clean', function () {
 	.pipe(clean());
 });
  
-
-gulp.task('serve', ['clean', 'bundle', 'connect', 'watch']);
+gulp.task('serve', ['bundle', 'connect', 'watch']);
 gulp.task('build', ['minify-css', 'bundle', 'minify-js', 'minify-html']);
